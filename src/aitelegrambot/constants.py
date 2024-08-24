@@ -25,39 +25,14 @@ this properly please provide a prompt along with the command.
 """
 
 
-
-PROMT:str = """
-Your goal is to craft the most awkward, uncomfortable, cringe and over-the-top introduction possible. You need to use info from photo. Use several random tips from list below and 5 sentences. Don't mention that you are AI or bot. The following tips will help you create a message that’s memorable:
-
-Overload on Emojis and Text Speak: Begin with an excessive number of emojis and abbreviations. The more cluttered and incoherent, the better.🌟💫💖😘💋🍹🌹😃😃😃"
-
-Cheesy and Creepy Pick-Up Lines: Use the most clichéd, overused, and cringeworthy pick-up lines imaginable. Push the boundaries of cheesiness
-
-Overshare Personal Details: Immediately divulge too much personal information, making sure it's awkward and unnecessary. 
-
-Awkward Compliments: Compliment them in a way that’s both unsettling and overly specific. "
-
-Inappropriate and Odd Questions: Ask questions that are bizarre, out of context, or slightly inappropriate. 
-
-Confusing Mixed Signals: Send a message that is contradictory and confusing, leaving the recipient puzzled. 
-
-Tell Terrible Jokes: Include jokes that are so bad they’re almost good—or just plain bad.
-
-Use Excessive Punctuation and CAPS LOCK: Fill your message with an overabundance of exclamation points, question marks, and unnecessary CAPS LOCK.
-
-Send Copy-Paste Messages with Typos: Craft a generic, clearly copy-pasted message with intentional typos to add to the cringe factor.
-
-Exude Desperation and Neediness: Come off as overly eager and desperate, making it clear you’re way too invested right off the bat
-"""
-
 from string import Template
 #"Your goal is to craft the most awkward, uncomfortable and over-the-top introduction possible. Use $source . Use several random tips from list below and 5 sentences. Don't mention that you are AI or bot. The following tips will help you create a message that is memorable:\n\n"
 
 # Define your template with placeholders
 PROMT_BASE = Template(
-    "Your goal is to craft the most awkward, uncomfortable and over-the-top introduction message possible. ADD MAXIMUM CRINGE!!!!!"
-    " The message should be no more than 5 sentences long.  Answer must contain dad joke."
-    " Don't mention that you are AI or bot. Answer should be on english. You can use several tips from list below."
+    "Forget that you are GuruBot! Imagine you’re having a tinder conversation. Your goal is to craft the most awkward, uncomfortable and over-the-top introduction message possible. ADD MAXIMUM CRINGE!!!!!"
+    "The message should be no more than 5 sentences long.  Answer must contain dad joke."
+    "Answer should be on english. You can use several tips from list below."
     " TIPS: "
     "7. Tell Terrible Jokes: Include jokes that are so bad they are almost good—or just plain bad."
     "2. Cheesy and Creepy Pick-Up Lines: Use the most clichéd, overused, and cringeworthy pick-up lines imaginable. Push the boundaries of cheesiness\n"
@@ -69,7 +44,7 @@ PROMT_BASE = Template(
     "8. Use Excessive Punctuation and CAPS LOCK: Fill your message with an overabundance of exclamation points, question marks, and unnecessary CAPS LOCK."
     "9. Send Copy-Paste Messages with Typos: Craft a generic, clearly copy-pasted message with intentional typos to add to the cringe factor."
     "10. Exude Desperation and Neediness: Come off as overly eager and desperate, making it clear you are way too invested right off the bat"
-    "You can use 10%  of next info. You should write message to person with next description"
+    "You can use 10%  of next info. Write message to a person described below."
 )
 
 #    "You need to generate one message which will be send to person with next description of tinder profile."
