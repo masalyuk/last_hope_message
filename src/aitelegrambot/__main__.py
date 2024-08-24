@@ -1,8 +1,8 @@
-from aitelegrambot.bot import TelegramBot
+from bot import TelegramBot
 from dotenv import load_dotenv
 import logging
 import os
-
+import openai
 
 def main():
     load_dotenv()
@@ -27,11 +27,12 @@ def main():
         )
         exit()
 
+    openai.api_key =  os.environ["OPENAI_TOKEN"]
     # Run the bot.
     bot: TelegramBot = TelegramBot(
         ollama_host=os.environ.get("OLLAMA_HOST", "localhost:11434"),
         bot_token=os.environ["TELEGRAM_BOT_TOKEN"],
-        default_model=os.environ.get("DEFAULT_MODEL", "tusharhero/rationalai"),
+        default_model=os.environ.get("DEFAULT_MODEL", "llava-llama3"),
         administrator_user_ids=[
             int(user_id) for user_id in os.environ.get("ADMIN_ID", 0).split(",")],
         enable_streaming_response=bool(
